@@ -1,6 +1,8 @@
 # youtubePlaylistGenerator
 YouTube Playlist Code Generator
 
+Created by **Paul Cassell**
+
 This project is a web-based YouTube playlist code generator that allows users to input YouTube video IDs, create a custom playlist, and generate the corresponding HTML embed code. Users can copy this code and embed it on their websites.
 
 Features
