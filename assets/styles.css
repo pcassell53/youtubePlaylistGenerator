@@ -1,35 +1,21 @@
  body {
      font-family: Arial, sans-serif;
-     margin: 20px;
      background-color: #f4f4f9;
+     overflow-x: hidden;
+     overflow-y: auto;
+     margin: 0 auto;
+     padding: 0;
  }
 
- h1 {
-     color: #333;
+ .youtubeLogoContainer {
+     margin-top: 10em;
  }
 
- label {
-     margin-right: 10px;
- }
-
- input,
- textarea {
-     padding: 10px;
-     margin: 5px 0;
-     width: 100%;
-     max-width: 500px;
- }
-
- button {
-     padding: 10px 15px;
-     background-color: #007BFF;
-     color: #fff;
-     border: none;
-     cursor: pointer;
- }
-
- button:hover {
-     background-color: #0056b3;
+ .playlistGeneratorPageContainer {
+     padding: 3em;
+     background-color: #fff;
+     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+     border-radius: 30px;
  }
 
  .playlist-container {
@@ -40,3 +26,177 @@
      max-width: 600px;
      word-wrap: break-word;
  }
+
+ .navbar-light .navbar-toggler {
+     border-color: rgba(0, 0, 0, 0);
+ }
+
+ .menu-btn {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80px;
+     height: 60px;
+     cursor: pointer;
+     transition: all .5s ease-in-out;
+     border: 3px solid #fff;
+ }
+
+ .menu-btn__burger {
+     width: 50px;
+     height: 6px;
+     background: #000;
+     border-radius: 5px;
+     transition: all .5s ease-in-out;
+ }
+
+ .menu-btn__burger::before,
+ .menu-btn__burger::after {
+     content: '';
+     position: absolute;
+     width: 50px;
+     height: 6px;
+     background: #000;
+     border-radius: 5px;
+     transition: all .5s ease-in-out;
+ }
+
+ .menu-btn__burger::before {
+     transform: translateY(-16px);
+ }
+
+ .menu-btn__burger::after {
+     transform: translateY(16px);
+ }
+
+ /* ANIMATION */
+ .menu-btn.open .menu-btn__burger {
+     transform: translateX(-50px);
+     background: transparent;
+     box-shadow: none;
+ }
+
+ .menu-btn.open .menu-btn__burger::before {
+     transform: rotate(45deg) translate(35px, -35px);
+ }
+
+ .menu-btn.open .menu-btn__burger::after {
+     transform: rotate(-45deg) translate(35px, 35px);
+ }
+
+ #mainNavbar>div>div.d-flex.flex-nowrap.w-100>button>span {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+ }
+
+ #mainNavbar>div>div.d-flex.flex-nowrap.w-100>button {
+     border-color: white;
+ }
+
+ #mainNavbar {
+     background-color: white;
+     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+ }
+
+ @media (min-width: 992px) {
+     .navPortfolioLinks {
+         width: 165px;
+     }
+
+     .navOtherLinks {
+         width: 85px;
+     }
+
+     .nav-link {
+         font-size: 14px;
+         font-weight: 700;
+     }
+
+     .homepagePCLogoMobile {
+         display: none;
+     }
+
+     .homepagePCLogoDesktop {
+         display: block;
+     }
+ }
+
+ @media (max-width: 991px) {
+     .nav-link {
+         font-size: 16px;
+         font-weight: 700;
+     }
+ }
+
+ @media (max-width: 767px) {
+     .nav-link {
+         text-align: left;
+     }
+ }
+
+ #cassellLogo {
+     height: 45px;
+ }
+
+ @media (min-width: 1800px) {
+     #cassellLogo {
+         height: 45px;
+         margin-top: 10px;
+     }
+ }
+
+ @media (min-width: 1799px) and (max-width: 992px) {
+     #cassellLogo {
+         height: 45px;
+         margin-top: 10px;
+     }
+ }
+
+ @media (min-width: 991px) and (max-width: 768px) {
+     #cassellLogo {
+         height: 45px;
+         margin-top: 10px;
+     }
+ }
+
+ @media (max-width: 767px) {
+     #cassellLogo {
+         height: 30px !important;
+         margin-top: 12px !important;
+         margin-bottom: 10px !important;
+     }
+ }
+
+ .youtubeLogoImg {
+     margin-bottom: 5em;
+ }
+
+ @media (min-width: 768px) {
+     .video-entry {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-top: 1em;
+         margin-bottom: 1em;
+         flex-wrap: wrap;
+     }
+ }
+
+ @media (max-width: 767px) {
+     .video-entry {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         margin-top: 1em;
+         margin-bottom: 1em;
+         flex-wrap: wrap;
+     }
+ }
+
+
+
+ /*
+ * YouTube Playlist Code Generator
+ * Created by Paul Cassell
+ * © 2024 Paul Cassell - All rights reserved
+ */
